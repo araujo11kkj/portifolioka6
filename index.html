@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Diário ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="topo">
+      <div>
+        <p class="etiqueta">MEU CANTINHO</p>
+        <h1>Meu diário <span>♡</span></h1>
+        <p class="subtitulo">Um lugar para organizar os pensamentos e cuidar de você.</p>
+      </div>
+      <div class="data-hoje"><span>HOJE É</span><strong id="dataHoje">Carregando data...</strong></div>
+    </header>
+
+    <main class="layout">
+      <section class="diario cartao">
+        <div class="titulo-secao">
+          <div><p class="etiqueta">SEU ESPAÇO</p><h2>Como foi seu dia?</h2></div>
+          <span class="icone-grande" aria-hidden="true">✿</span>
+        </div>
+        <form id="formDiario">
+          <label for="tituloEntrada">Dê um título para este momento</label>
+          <input id="tituloEntrada" type="text" maxlength="70" placeholder="Ex.: Um dia cheio de aprendizados">
+          <label for="humorEntrada">Como você está se sentindo?</label>
+          <select id="humorEntrada">
+            <option>😊 Feliz</option><option>😌 Tranquila</option><option>🥰 Grata</option>
+            <option>😴 Cansada</option><option>😟 Preocupada</option><option>😔 Triste</option><option>🤔 Pensativa</option>
+          </select>
+          <label for="textoEntrada">Escreva o que quiser</label>
+          <textarea id="textoEntrada" rows="8" placeholder="O que aconteceu hoje? O que você aprendeu? Pelo que se sente grata?"></textarea>
+          <div class="acoes-formulario"><span id="aviso" role="status">Seus registros ficam salvos neste navegador.</span><button class="botao-principal" type="submit">Salvar entrada ♡</button></div>
+        </form>
+        <div class="divisor"></div>
+        <div class="historico-topo"><div><p class="etiqueta">SUAS MEMÓRIAS</p><h2>Entradas anteriores</h2></div><span class="contador" id="contadorEntradas">0 entradas</span></div>
+        <div id="listaEntradas" class="lista-entradas"></div>
+      </section>
+
+      <aside class="coluna-lateral">
+        <section class="pomodoro cartao">
+          <p class="etiqueta">PAUSA PARA CONCENTRAR</p>
+          <div class="pomodoro-titulo"><h2>Pomodoro</h2><span>♡</span></div>
+          <p class="texto-pomodoro">Um passinho de cada vez.</p>
+          <div class="modos" role="group" aria-label="Escolha o tempo">
+            <button type="button" class="modo ativo" data-minutos="25" data-tipo="Foco">Foco</button>
+            <button type="button" class="modo" data-minutos="5" data-tipo="Pausa curta">Pausa curta</button>
+            <button type="button" class="modo" data-minutos="15" data-tipo="Pausa longa">Pausa longa</button>
+          </div>
+          <div class="relogio">
+            <svg class="anel" viewBox="0 0 220 220" aria-hidden="true"><circle class="anel-fundo" cx="110" cy="110" r="96"></circle><circle class="anel-progresso" id="progresso" cx="110" cy="110" r="96"></circle></svg>
+            <div class="tempo-centro"><span id="tipoTimer">Foco</span><strong id="tempo">25:00</strong><small id="estadoTimer">Pronto quando você estiver ♡</small></div>
+          </div>
+          <div class="botoes-timer"><button type="button" id="iniciarTimer" class="botao-principal">Começar</button><button type="button" id="reiniciarTimer" class="botao-secundario">Reiniciar</button></div>
+          <p class="dica">Dica: escolha uma tarefa, deixe as distrações de lado e faça o seu melhor.</p>
+        </section>
+        <section class="lembrete cartao"><span class="lembrete-icone">☁</span><p class="etiqueta">UM LEMBRETE</p><h3>Você não precisa fazer tudo de uma vez.</h3><p>Pequenos passos também são progresso. Respire e continue no seu ritmo.</p></section>
+      </aside>
+    </main>
+    <footer>Feito com carinho para você ♡</footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
